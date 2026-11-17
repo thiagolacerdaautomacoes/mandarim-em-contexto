@@ -1,10 +1,10 @@
 {
   "extensionName": {
-    "message": "Pinyin Annotator | Anotador Pinyin",
+    "message": "Mandarim em Contexto",
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Extensão de navegador que sobrepõe anotações em pinyin ou zhuyin sobre caracteres chineses em páginas web e legendas de vídeo.",
+    "message": "Extensão pessoal para ler chinês com pinyin, consultar palavras em português e revisar vocabulário em contexto.",
     "description": "Descrição da extensão."
   },
   "commandToggleDescription": {

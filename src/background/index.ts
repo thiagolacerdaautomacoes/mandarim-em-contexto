@@ -7,6 +7,8 @@ import {
 } from "~constants"
 import { collectFrameStatus, isFrameStatusReport } from "~lib/frame-status"
 import { applyLanguage, t } from "~lib/i18n"
+import { addStudyCard } from "~lib/study-store"
+import { isAddStudyCardMessage } from "~lib/study-types"
 import {
   isTabAnnotationMessage,
   TabAnnotationRegistry
@@ -107,6 +109,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       updateBadge(sender.tab.id, true)
     }
     return false
+  }
+
+  if (isAddStudyCardMessage(message)) {
+    void addStudyCard(message.draft)
+      .then((card) => sendResponse({ ok: true, cardId: card.id }))
+      .catch(() => sendResponse({ ok: false }))
+    return true
   }
 
   if (!isTabAnnotationMessage(message)) {

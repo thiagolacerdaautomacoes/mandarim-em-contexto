@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    ".plasmo/index.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
+}

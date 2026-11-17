@@ -13,6 +13,7 @@ import { applyLanguage, useI18n } from "~lib/i18n"
 import { useCommandShortcut } from "~lib/use-command-shortcut"
 
 import { openOptionsPage } from "./openOptionsPage"
+import { openStudyPage } from "./openStudyPage"
 import PopupView from "./PopupView"
 import { useTheme } from "./useTheme"
 
@@ -93,6 +94,7 @@ function Popup() {
       shortcut={shortcut}
       onRefresh={handleRefresh}
       onOpenOptions={openOptionsPage}
+      onOpenStudy={openStudyPage}
       communicateWithContentScript={communicateWithContentScript}
       onPreviewChange={handlePreviewChange}
       previewAnnotationScale={previewAnnotationScale}

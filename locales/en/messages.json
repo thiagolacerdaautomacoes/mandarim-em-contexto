@@ -1,10 +1,10 @@
 {
   "extensionName": {
-    "message": "Pinyin Annotator",
+    "message": "Mandarin in Context",
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "A browser extension that overlays Pinyin or Zhuyin annotations on Chinese characters in web pages and video subtitles.",
+    "message": "A personal study extension that adds Pinyin to Chinese pages and turns contextual vocabulary into review cards.",
     "description": "Description of the extension."
   },
   "commandToggleDescription": {

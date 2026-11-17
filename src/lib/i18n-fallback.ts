@@ -2,9 +2,9 @@
 // Run `npm run gen:i18n` to regenerate from locales/en/messages.json.
 
 export const i18nFallback: Record<string, string> = {
-  extensionName: "Pinyin Annotator",
+  extensionName: "Mandarin in Context",
   extensionDescription:
-    "A browser extension that overlays Pinyin or Zhuyin annotations on Chinese characters in web pages and video subtitles.",
+    "A personal study extension that adds Pinyin to Chinese pages and turns contextual vocabulary into review cards.",
   commandToggleDescription: "Add or remove annotations",
   contextMenuToggle: "Add or Remove Annotations",
   statusAnnotated: "Annotated",

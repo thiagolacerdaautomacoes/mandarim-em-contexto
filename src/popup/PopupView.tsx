@@ -17,6 +17,7 @@ export interface PopupViewProps {
   shortcut: string
   onRefresh: () => void
   onOpenOptions: () => void
+  onOpenStudy: () => void
   communicateWithContentScript: (
     action: UserAction,
     data?: UserPreferences
@@ -41,6 +42,7 @@ const PopupView: React.FC<PopupViewProps> = ({
   shortcut,
   onRefresh,
   onOpenOptions,
+  onOpenStudy,
   communicateWithContentScript,
   onPreviewChange,
   previewAnnotationScale,
@@ -96,9 +98,14 @@ const PopupView: React.FC<PopupViewProps> = ({
         ) : (
           <span />
         )}
-        <button className="btn btn-text" onClick={onOpenOptions}>
-          {t("buttonOptions")}
-        </button>
+        <span>
+          <button className="btn btn-text" onClick={onOpenStudy}>
+            Estudar
+          </button>
+          <button className="btn btn-text" onClick={onOpenOptions}>
+            {t("buttonOptions")}
+          </button>
+        </span>
       </footer>
     </div>
   )

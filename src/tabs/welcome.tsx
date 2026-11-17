@@ -38,6 +38,7 @@ import { convertTextContentToHtml } from "~util"
 
 import { BrowserMock, Pointer } from "../components/browser-mock"
 import { openOptionsPage } from "../popup/openOptionsPage"
+import { openStudyPage } from "../popup/openStudyPage"
 import PopupView from "../popup/PopupView"
 
 import "./welcome.css"
@@ -485,6 +486,7 @@ function Welcome() {
                         shortcut={shortcut}
                         onRefresh={() => {}}
                         onOpenOptions={() => void openOptionsPage()}
+                        onOpenStudy={openStudyPage}
                         communicateWithContentScript={driveDemo}
                       />
                     </div>

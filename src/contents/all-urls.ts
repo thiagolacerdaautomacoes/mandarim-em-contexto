@@ -29,6 +29,7 @@ import {
 } from "~lib/annotation-scale"
 import { buildCaptionBackdropCss } from "~lib/caption-styles"
 import { reportFrameStatus } from "~lib/frame-status"
+import { HoverInspector } from "~lib/hover-inspector"
 import { createMutationBatcher } from "~lib/mutation-batcher"
 import { loadUserPreferences, saveUserPreferences } from "~lib/user-preferences"
 import {
@@ -84,6 +85,9 @@ export class Annotator {
     chrome.runtime.onMessage.addListener(this.handleUserAction.bind(this))
     this.styleTag = document.createElement("style")
     document.head.appendChild(this.styleTag)
+    // The inspector is event-driven and only renders a card after the reader
+    // pauses on an annotated character; it never scans or sends a whole page.
+    new HoverInspector()
     this.init()
   }
 

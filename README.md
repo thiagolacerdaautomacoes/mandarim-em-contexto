@@ -1,4 +1,43 @@
-# Pinyin Annotator
+# Mandarim em Contexto
+
+> Um fork pessoal do Pinyin Annotator, licenciado sob GPL-3.0, para transformar
+> leitura de chinês em consulta contextual, cartões de revisão e prática ativa
+> em português brasileiro.
+
+## O que foi acrescentado neste fork
+
+- Consulta ao passar o mouse: prioriza a palavra no contexto (`银行`, “banco”)
+  antes de explicar um caractere isolado (`行`).
+- Cartões locais: a captura guarda palavra, pinyin, significado, contexto e a
+  origem da leitura, sem enviar o conteúdo da página a um serviço externo.
+- Página **Estudar**: revisão espaçada, coleção de cartões e prática de ordem
+  de palavras.
+- Plano de evolução para correção, fala, conversação, PWA mobile e registro
+  deliberado no GitHub: [STUDY_SYSTEM_PLAN.md](STUDY_SYSTEM_PLAN.md).
+
+O léxico pt-BR atual é uma semente curada para demonstrar o fluxo. Antes de
+distribuir uma versão ampla, substitua-o por uma fonte de dicionário licenciada
+e mantenha as atribuições exigidas.
+
+## Testar a primeira versão
+
+O pacote Chrome MV3 já foi gerado em `build/chrome-mv3-prod`. Para carregá-lo
+no Chrome, abra `chrome://extensions`, ative o **Modo do desenvolvedor**,
+escolha **Carregar sem compactação** e selecione essa pasta. Em uma página com
+chinês, acione a anotação, passe o mouse sobre uma entrada do léxico e use
+**Adicionar à revisão**. O botão **Estudar** no popup abre a revisão, a prática
+e o registro Markdown copiável.
+
+Para recompilar depois de mudar o código:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm build
+```
+
+---
+
+# Pinyin Annotator (base do fork)
 
 > **🌐 Language / 語言:** English · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [Tiếng Việt](README.vi.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Português (Brasil)](README.pt-BR.md) · [Русский](README.ru.md) · [Deutsch](README.de.md) · [Italiano](README.it.md)
 
@@ -38,7 +77,6 @@ Pinyin Annotator is a browser extension that overlays **Hanyu Pinyin** or **Zhuy
 
 ## 🔨 Making a Production Build
 
-
 ```bash
 pnpm install
 pnpm package:all
@@ -47,6 +85,7 @@ pnpm package:all
 This builds and zips both Chrome and Firefox releases into `build/chrome-mv3-prod.zip` and `build/firefox-mv3-prod.zip`. For a single target, run `pnpm build --target=chrome-mv3` then `pnpm package --target=chrome-mv3` (or the `firefox-mv3` equivalent).
 
 For local testing, load the unpacked build (`pnpm build:all`):
+
 - Chrome: `chrome://extensions` → Developer mode → Load unpacked → `build/chrome-mv3-prod/`
 - Firefox: `about:debugging#/runtime/this-firefox` → Load Temporary Add-on → `build/firefox-mv3-prod/manifest.json`
 

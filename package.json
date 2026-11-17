@@ -1,8 +1,8 @@
 {
-  "name": "pinyin-annotator",
-  "displayName": "Pinyin Annotator",
-  "version": "1.9.0",
-  "description": "A browser extension overlays Pinyin or Zhuyin annotations over Chinese characters present in web pages and video closed captions.",
+  "name": "mandarim-em-contexto",
+  "displayName": "Mandarim em Contexto",
+  "version": "0.1.0",
+  "description": "Uma extensão pessoal para ler chinês com pinyin, consultar palavras em português e estudar por repetição espaçada.",
   "author": "fixicelo <fixicelo@gmail.com>",
   "scripts": {
     "dev": "plasmo dev",

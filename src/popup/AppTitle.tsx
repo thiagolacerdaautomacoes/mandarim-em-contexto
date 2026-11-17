@@ -3,12 +3,10 @@ import { useStorage } from "@plasmohq/storage/hook"
 import { PronunciationSystem, StorageKey, ToneType } from "~constants"
 
 const titleChars = [
-  { char: "拼", pinyin: "pīn", zhuyin: "ㄆㄧㄣˇ" },
-  { char: "音", pinyin: "yīn", zhuyin: "ㄧㄣˇ" },
-  { char: "標", pinyin: "biāo", zhuyin: "ㄅㄧㄠˇ" },
-  { char: "註", pinyin: "zhù", zhuyin: "ㄓㄨˋ" },
-  { char: "工", pinyin: "gōng", zhuyin: "ㄍㄨㄥˇ" },
-  { char: "具", pinyin: "jù", zhuyin: "ㄐㄩˋ" }
+  { char: "汉", pinyin: "hàn", zhuyin: "ㄏㄢˋ" },
+  { char: "语", pinyin: "yǔ", zhuyin: "ㄩˇ" },
+  { char: "学", pinyin: "xué", zhuyin: "ㄒㄩㄝˊ" },
+  { char: "习", pinyin: "xí", zhuyin: "ㄒㄧˊ" }
 ]
 
 const AppTitle = () => {
