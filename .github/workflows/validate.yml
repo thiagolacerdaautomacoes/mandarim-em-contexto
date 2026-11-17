@@ -14,14 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
       - uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: pnpm
-
-      - uses: pnpm/action-setup@v6
-        with:
-          version: 10
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec prettier --check 'src/**/*.{ts,tsx,css}' 'test/unit/**/*.ts' STUDY_SYSTEM_PLAN.md
