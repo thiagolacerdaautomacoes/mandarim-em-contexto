@@ -692,7 +692,7 @@ function Options() {
               }}>
               <span className="text-secondary text-small">
                 <a
-                  href="https://github.com/fixicelo/pinyin-annotator/issues"
+                  href="https://github.com/thiagolacerdaautomacoes/mandarim-em-contexto/issues"
                   target="_blank"
                   rel="noopener noreferrer">
                   {t("optionsReportBug")}

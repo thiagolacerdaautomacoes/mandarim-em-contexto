@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mandarim em Contexto — prática</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { background: #f3f7f6; color: #17212b; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; height: 800px; margin: 0; width: 1280px; }
+      main { margin: 0 auto; max-width: 1040px; padding: 54px 0; }
+      header { align-items: end; display: flex; justify-content: space-between; }
+      .eyebrow { color: #087c71; font-size: 12px; font-weight: 800; letter-spacing: .09em; margin: 0; text-transform: uppercase; }
+      h1 { font-size: 42px; letter-spacing: -.045em; margin: 5px 0 0; }
+      .summary { color: #64748b; font-size: 14px; margin: 0 0 5px; }
+      nav { border-bottom: 1px solid #d8e1e5; display: flex; gap: 26px; margin-top: 36px; }
+      nav span { color: #64748b; font-size: 14px; padding: 12px 6px; }
+      nav .selected { border-bottom: 3px solid #087c71; color: #087c71; font-weight: 800; }
+      .panel { background: #fff; border: 1px solid #d8e1e5; border-radius: 18px; box-shadow: 0 15px 35px rgba(32, 54, 60, .08); margin-top: 28px; padding: 38px; }
+      h2 { font-size: 28px; letter-spacing: -.03em; margin: 8px 0; }
+      .desc { color: #64748b; font-size: 16px; margin: 0 0 25px; }
+      .answer { border: 1px dashed #b8c7c9; border-radius: 12px; color: #087c71; font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; font-size: 30px; letter-spacing: .16em; margin-top: 20px; min-height: 106px; padding: 33px 25px; }
+      .tokens { display: flex; gap: 12px; margin-top: 17px; }
+      .tokens span { background: #fff; border: 1px solid #cbd7d9; border-radius: 10px; font-family: "PingFang SC", sans-serif; font-size: 25px; padding: 11px 20px; }
+      .tokens .used { background: #d9f2ee; border-color: #9cd9d1; color: #087c71; }
+      .feedback { background: #edf8f5; border-left: 4px solid #087c71; border-radius: 8px; color: #35535a; font-size: 15px; line-height: 1.55; margin-top: 30px; padding: 15px 18px; }
+      .cards { display: grid; gap: 17px; grid-template-columns: repeat(3, 1fr); margin-top: 27px; }
+      .mini { background: #f3f7f6; border-radius: 12px; padding: 17px; }
+      .mini strong { color: #087c71; display: block; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+      .mini p { color: #53636a; font-size: 13px; line-height: 1.45; margin: 8px 0 0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><div><p class="eyebrow">Mandarim em Contexto</p><h1>Estudar</h1></div><p class="summary">3 para revisar · 12 cartões salvos</p></header>
+      <nav><span>Revisar (3)</span><span>Cartões</span><span class="selected">Praticar</span><span>Registro</span></nav>
+      <section class="panel"><p class="eyebrow">Produção guiada</p><h2>Monte uma frase natural</h2><p class="desc">Use as palavras para dizer: “Eu trabalho no banco hoje.”</p><div class="answer">我 今天 在 银行 工作</div><div class="tokens"><span class="used">我</span><span class="used">今天</span><span class="used">在</span><span class="used">银行</span><span class="used">工作</span></div><div class="feedback"><b>Correto.</b> 我今天在银行工作。 Em chinês, o tempo normalmente aparece antes do lugar e do verbo.</div><div class="cards"><div class="mini"><strong>Produza</strong><p>Forme frases com as palavras que acabou de aprender.</p></div><div class="mini"><strong>Entenda</strong><p>Veja uma explicação curta sobre a ordem e o uso.</p></div><div class="mini"><strong>Registre</strong><p>Copie um resumo privado em Markdown para o seu GitHub.</p></div></div></section>
+    </main>
+  </body>
+</html>

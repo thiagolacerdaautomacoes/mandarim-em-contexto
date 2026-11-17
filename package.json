@@ -1,7 +1,7 @@
 {
   "name": "mandarim-em-contexto",
   "displayName": "Mandarim em Contexto",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Uma extensão pessoal para ler chinês com pinyin, consultar palavras em português e estudar por repetição espaçada.",
   "author": "fixicelo <fixicelo@gmail.com>",
   "scripts": {

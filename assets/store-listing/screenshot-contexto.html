@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mandarim em Contexto — leitura</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        background: #edf3f1;
+        color: #17212b;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        width: 1280px;
+        height: 800px;
+      }
+      .shell { height: 100%; padding: 36px 52px 42px; }
+      header { align-items: center; display: flex; justify-content: space-between; }
+      .brand { align-items: center; display: flex; font-size: 22px; font-weight: 760; gap: 12px; }
+      .brand img { border-radius: 9px; height: 42px; width: 42px; }
+      .brand small { color: #087c71; display: block; font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+      .status { background: #d9f2ee; border-radius: 999px; color: #087c71; font-size: 13px; font-weight: 700; padding: 8px 12px; }
+      .layout { display: grid; gap: 28px; grid-template-columns: 1.6fr .8fr; margin-top: 30px; }
+      .reading, .study { background: #fff; border: 1px solid #d8e1e5; border-radius: 19px; box-shadow: 0 16px 35px rgba(26, 49, 57, .09); }
+      .reading { min-height: 622px; overflow: hidden; padding: 0 52px 42px; position: relative; }
+      .browser { align-items: center; border-bottom: 1px solid #e9eef0; display: flex; gap: 7px; height: 54px; margin: 0 -52px 44px; padding: 0 20px; }
+      .dot { background: #dce6e7; border-radius: 50%; height: 8px; width: 8px; }
+      .url { background: #f3f7f6; border-radius: 6px; color: #839195; font-size: 12px; margin-left: 10px; padding: 7px 12px; width: 255px; }
+      .eyebrow { color: #087c71; font-size: 12px; font-weight: 800; letter-spacing: .08em; margin: 0 0 11px; text-transform: uppercase; }
+      h1 { font-size: 36px; letter-spacing: -.04em; line-height: 1.08; margin: 0; max-width: 520px; }
+      .lead { color: #53636a; font-size: 17px; line-height: 1.55; margin: 20px 0 28px; max-width: 570px; }
+      .chinese { color: #182c34; font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; font-size: 34px; letter-spacing: .08em; line-height: 2; margin: 10px 0 0; }
+      ruby { cursor: default; position: relative; }
+      rt { color: #087c71; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0; }
+      .focus { background: #d9f2ee; border-bottom: 3px solid #087c71; border-radius: 7px 7px 2px 2px; padding: 0 4px 3px; }
+      .tooltip { background: #fff; border: 1px solid #cddbdc; border-radius: 13px; box-shadow: 0 14px 30px rgba(18, 47, 50, .18); left: 270px; padding: 16px; position: absolute; top: 355px; width: 264px; }
+      .tooltip strong { font-family: "PingFang SC", sans-serif; font-size: 28px; }
+      .tooltip .pin { color: #087c71; font-size: 14px; font-weight: 700; margin-left: 9px; }
+      .tooltip p { font-size: 14px; line-height: 1.4; margin: 8px 0; }
+      .tooltip .example { background: #f3f7f6; border-radius: 7px; color: #53636a; font-size: 12px; padding: 8px; }
+      .tooltip button { background: #087c71; border: 0; border-radius: 8px; color: white; font-weight: 700; margin-top: 10px; padding: 9px 12px; }
+      .study { min-height: 622px; padding: 28px; }
+      .study .kicker { color: #087c71; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+      .study h2 { font-size: 26px; letter-spacing: -.035em; margin: 6px 0 4px; }
+      .study .count { color: #6b7c84; font-size: 13px; }
+      .card { background: #f3f7f6; border-radius: 16px; margin-top: 35px; padding: 33px 20px; text-align: center; }
+      .hanzi { font-family: "PingFang SC", sans-serif; font-size: 66px; font-weight: 700; }
+      .pinyin { color: #087c71; font-size: 17px; font-weight: 700; margin-top: 7px; }
+      .answer { border-top: 1px dashed #bfcccc; font-size: 15px; line-height: 1.5; margin-top: 24px; padding-top: 20px; }
+      .grades { display: grid; gap: 7px; grid-template-columns: repeat(2, 1fr); margin-top: 16px; }
+      .grades span { border: 1px solid #d4e0e0; border-radius: 8px; font-size: 12px; padding: 9px 4px; }
+      .grades span:nth-child(3) { background: #087c71; border-color: #087c71; color: white; font-weight: 700; }
+      .caption { color: #61747b; font-size: 13px; line-height: 1.45; margin: 26px 3px 0; }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div class="brand"><img src="icon-128.png" /><span><small>Extensão para Chrome</small>Mandarim em Contexto</span></div>
+        <span class="status">Leitura + revisão</span>
+      </header>
+      <section class="layout">
+        <article class="reading">
+          <div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">leitura-em-chines.example</div></div>
+          <p class="eyebrow">Leitura contextual</p>
+          <h1>Entenda palavras — não só caracteres isolados.</h1>
+          <p class="lead">Passe o mouse sobre um hanzi anotado para consultar pinyin, significado em português e um exemplo de uso.</p>
+          <p class="chinese"><ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>中国<rt>Zhōngguó</rt></ruby><ruby class="focus">银行<rt>yínháng</rt></ruby><ruby>工作<rt>gōngzuò</rt></ruby>。</p>
+          <aside class="tooltip"><strong>银行</strong><span class="pin">yínháng</span><p><b>banco</b> · instituição financeira</p><div class="example">我在银行工作。<br />Eu trabalho em um banco.</div><button>Adicionar à revisão</button></aside>
+        </article>
+        <aside class="study">
+          <div class="kicker">Estudo diário</div>
+          <h2>3 para revisar</h2>
+          <div class="count">Cartões capturados durante a leitura</div>
+          <div class="card"><div class="hanzi">银行</div><div class="pinyin">yínháng</div><div class="answer"><b>banco</b><br />instituição financeira</div><div class="grades"><span>Errei<br />10 min</span><span>Difícil<br />6 h</span><span>Bom<br />1 dia</span><span>Fácil<br />3 dias</span></div></div>
+          <p class="caption">Salve vocabulário relevante e volte a ele no intervalo certo.</p>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

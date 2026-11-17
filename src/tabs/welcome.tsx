@@ -43,34 +43,10 @@ import PopupView from "../popup/PopupView"
 
 import "./welcome.css"
 
-const REPO_URL = "https://github.com/fixicelo/pinyin-annotator"
-const FEEDBACK_URL = "https://github.com/fixicelo/pinyin-annotator/issues/new"
-
-/**
- * Chinese Find, the sibling extension. This guide is the mirror of its own:
- * there this extension is the one being recommended, here it is the one being
- * pinned and Chinese Find is the row that links out.
- */
-const CHINESE_FIND_STORES = {
-  chrome:
-    "https://chrome.google.com/webstore/detail/ggdpaigngdljdilmcbdeeffahjpmgema",
-  edge: "https://microsoftedge.microsoft.com/addons/detail/peebdkhlndmpmhdlgalnkcmkklipockf",
-  firefox: "https://addons.mozilla.org/addon/chinese-find/"
-} as const
-const CHINESE_FIND_UTM = "?utm_source=pinyin-annotator&utm_medium=onboarding"
-/** Their store icon, as the sibling guide does for this extension. */
-const CHINESE_FIND_ICON =
-  "https://addons.mozilla.org/user-media/addon_icons/2960/2960520-64.png?modified=ca10d066"
-
-function chineseFindUrl(): string {
-  const ua = navigator.userAgent
-  const store = ua.includes("Firefox/")
-    ? "firefox"
-    : ua.includes("Edg/")
-      ? "edge"
-      : "chrome"
-  return CHINESE_FIND_STORES[store] + CHINESE_FIND_UTM
-}
+const REPO_URL =
+  "https://github.com/thiagolacerdaautomacoes/mandarim-em-contexto"
+const FEEDBACK_URL =
+  "https://github.com/thiagolacerdaautomacoes/mandarim-em-contexto/issues/new"
 
 const PAGE_SAMPLE = "讀音落在字上，一頁書就有了聲音。"
 const PAGE_SAMPLE_SECOND_LINE = "看得懂讀音，陌生的字不再停頓。"
@@ -81,14 +57,6 @@ const CAPTION_SAMPLES = [
   "換句時，讀音也跟著換。"
 ]
 const CAPTION_INTERVAL_MS = 4200
-
-const PIN_FILLED = (
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <g transform="rotate(45 12 12)">
-      <path d="M16 9V4h1a1 1 0 0 0 0-2H7a1 1 0 0 0 0 2h1v5c0 1.66-1.34 3-3 3v2h5.97v7l1 1 1-1v-7H19v-2c-1.66 0-3-1.34-3-3z" />
-    </g>
-  </svg>
-)
 
 const PIN_OUTLINE = (
   <svg
@@ -154,7 +122,6 @@ function Welcome() {
   const shortcut = useCommandShortcut()
   const [isAnnotated, setIsAnnotated] = useState(false)
   const [captionIndex, setCaptionIndex] = useState(0)
-  const [chineseFindIconReady, setChineseFindIconReady] = useState(false)
   const popupHostRef = useRef<HTMLDivElement>(null)
   const [popupRoot, setPopupRoot] = useState<ShadowRoot | null>(null)
 
@@ -251,25 +218,7 @@ function Welcome() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [toneType, pronunciationSystem]
   )
-  const chineseFindHref = useMemo(() => chineseFindUrl(), [])
-
-  useEffect(() => {
-    // The sibling's icon comes from the store, as this guide's own icon does on
-    // their page; until it arrives the row shows a letter instead.
-    const image = new Image()
-    const showIcon = () => setChineseFindIconReady(true)
-    image.addEventListener("load", showIcon)
-    image.src = CHINESE_FIND_ICON
-    return () => image.removeEventListener("load", showIcon)
-  }, [])
-
-  const popupPromoIcon = chineseFindIconReady ? (
-    <img src={CHINESE_FIND_ICON} alt="" />
-  ) : (
-    <span className="tool-btn-tile" aria-hidden="true">
-      繁
-    </span>
-  )
+  const popupPromoIcon = <img src={iconUrl} alt="" />
   const shortcutParts = shortcut ? shortcut.split("+") : []
 
   // Clicking a window moves on to the step below it.
@@ -337,7 +286,7 @@ function Welcome() {
           <BrowserMock
             mode="puzzle"
             tab="新手指南"
-            url="github.com/fixicelo/pinyin-annotator"
+            url="github.com/thiagolacerdaautomacoes/mandarim-em-contexto"
             href={REPO_URL}
             onAdvance={() => advanceFrom(0)}
             pinnedPromo={popupPromoIcon}>
@@ -359,7 +308,7 @@ function Welcome() {
           <BrowserMock
             mode="menu"
             tab="新手指南"
-            url="github.com/fixicelo/pinyin-annotator"
+            url="github.com/thiagolacerdaautomacoes/mandarim-em-contexto"
             href={REPO_URL}
             onAdvance={() => advanceFrom(1)}
             pinnedPromo={popupPromoIcon}>
@@ -369,29 +318,9 @@ function Welcome() {
               </p>
             </div>
             <div className="ext-menu">
-              <a
-                className="ext-row ext-row-link"
-                href={chineseFindHref}
-                target="_blank"
-                rel="noopener"
-                aria-label="繁簡易搜（在擴充功能商店開啟，另開新分頁）">
-                {chineseFindIconReady ? (
-                  <img className="ext-icon" src={CHINESE_FIND_ICON} alt="" />
-                ) : (
-                  <span
-                    className="ext-icon tile chinese-find"
-                    aria-hidden="true">
-                    繁
-                  </span>
-                )}
-                <span className="ext-name">繁簡易搜</span>
-                <span className="ext-pin is-pinned" aria-hidden="true">
-                  {PIN_FILLED}
-                </span>
-              </a>
               <div className="ext-row is-active" aria-hidden="true">
                 <img className="ext-icon" src={iconUrl} alt="" />
-                <span className="ext-name">拼音標註工具</span>
+                <span className="ext-name">Mandarim em Contexto</span>
                 <span className="ext-pin is-target">
                   {PIN_OUTLINE}
                   <span className="mock-badge">釘選</span>
@@ -418,7 +347,7 @@ function Welcome() {
           <BrowserMock
             mode="popup"
             tab="新手指南"
-            url="github.com/fixicelo/pinyin-annotator"
+            url="github.com/thiagolacerdaautomacoes/mandarim-em-contexto"
             href={REPO_URL}
             pinnedPromo={popupPromoIcon}>
             <div className="mock-page-text">
