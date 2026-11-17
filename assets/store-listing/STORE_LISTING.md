@@ -55,9 +55,14 @@ Pinyin Annotator.
 
 - **Finalidade única:** anotar caracteres chineses em páginas web com pinyin ou
   zhuyin e ajudar a pessoa a estudar vocabulário contextual com cartões locais.
-- **Coleta ou transmissão de dados do usuário ao desenvolvedor:** não.
-- **Dados de navegação:** o texto da página é lido e processado localmente para
-  produzir anotações; não é transmitido a servidores do desenvolvedor.
+- **Categorias a selecionar no formulário:** `Conteúdo do site` e `Histórico
+da Web`. A Chrome Web Store exige a divulgação mesmo para dados processados
+  apenas no dispositivo.
+- **Transmissão de dados ao desenvolvedor:** não. O texto e os dados de origem
+  são tratados localmente e não são enviados a servidores do desenvolvedor.
+- **Dados de navegação:** o texto da página é lido localmente para produzir
+  anotações. A URL e o título de origem só são salvos quando a pessoa adiciona
+  um cartão de revisão explicitamente.
 - **Cartões:** somente o item que a pessoa adiciona explicitamente é salvo no
   armazenamento local do Chrome, junto de palavra, pinyin, definição, contexto,
   URL e título de origem.

@@ -8,13 +8,15 @@ dados que a extensão processa e onde eles ficam.
 ## Dados processados localmente
 
 Para exibir pinyin ou zhuyin, a extensão lê o texto chinês da página aberta e o
-processa no navegador. Esse texto não é enviado automaticamente a servidores
-do desenvolvedor.
+processa no navegador. Para fins de divulgação da Chrome Web Store, isso é
+tratamento local de **conteúdo do site**. Esse texto não é enviado
+automaticamente a servidores do desenvolvedor.
 
 Quando você escolhe **Adicionar à revisão**, a extensão armazena localmente no
 perfil do Chrome a palavra, pinyin, definição, exemplo, contexto, URL e título
-da página de origem, além do estado de repetição espaçada. Preferências de
-anotação também são armazenadas pelo Chrome.
+da página de origem, além do estado de repetição espaçada. URL e título de
+origem são tratados como **histórico da Web** para fins de divulgação da Chrome
+Web Store. Preferências de anotação também são armazenadas pelo Chrome.
 
 ## O que não fazemos
 
