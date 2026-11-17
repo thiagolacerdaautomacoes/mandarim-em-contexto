@@ -1,9 +1,9 @@
 {
   "name": "mandarim-em-contexto",
   "displayName": "Mandarim em Contexto",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Uma extensão pessoal para ler chinês com pinyin, consultar palavras em português e estudar por repetição espaçada.",
-  "author": "fixicelo <fixicelo@gmail.com>",
+  "author": "Thiago Lacerda <thiago@thiagolacerda.com>",
   "scripts": {
     "dev": "plasmo dev",
     "clean": "rm -rf build/chrome-mv3-prod build/firefox-mv3-prod build/chrome-mv3-prod.zip build/firefox-mv3-prod.zip",

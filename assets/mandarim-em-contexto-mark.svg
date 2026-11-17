@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Mandarim em Contexto</title>
+  <desc id="desc">Marca abstrata de dois cartões de estudo em contexto.</desc>
+  <rect width="1024" height="1024" rx="238" fill="#0A6F68"/>
+  <path d="M209 319c0-64 52-116 116-116h346c64 0 116 52 116 116v236c0 64-52 116-116 116H483L337 803V671h-12c-64 0-116-52-116-116V319Z" fill="#F9F5EA"/>
+  <path d="M371 372h274M371 459h181M371 546h232" fill="none" stroke="#0A6F68" stroke-linecap="round" stroke-width="47"/>
+  <path d="M700 670c0-64 52-116 116-116v184c0 64-52 116-116 116H561l139-184Z" fill="#E9775D"/>
+  <circle cx="736" cy="351" r="35" fill="#E9775D"/>
+  <circle cx="827" cy="438" r="35" fill="#BFE4DC"/>
+  <circle cx="737" cy="525" r="35" fill="#E9775D"/>
+</svg>
